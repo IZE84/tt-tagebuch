@@ -829,14 +829,32 @@ img{max-width:100%;display:block}
 </div>
 
 <script>
-function showPage(id){
+function showPage(id, pushState){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+id).classList.add('active');
   document.querySelectorAll('.preview-btn').forEach(b=>b.classList.remove('active'));
   const m={home:0,posts:1,post:2,post2:2,post3:2,post4:2,post5:2,post6:2,post7:2,post8:2,post9:2,post10:2,stats:3};
   document.querySelectorAll('.preview-btn')[m[id]].classList.add('active');
   window.scrollTo(0,0);
+  // Update browser history so Back/Forward buttons work
+  if(pushState !== false){
+    history.pushState({page:id}, '', '#'+id);
+  }
 }
+// Handle browser Back / Forward
+window.addEventListener('popstate', function(e){
+  const id = (e.state && e.state.page) ? e.state.page : 'home';
+  showPage(id, false);
+});
+// On first load: restore page from URL hash if present
+(function(){
+  const hash = location.hash.replace('#','');
+  const valid = ['home','posts','post','post2','post3','post4','post5','post6','post7','post8','post9','post10','stats'];
+  const start = valid.includes(hash) ? hash : 'home';
+  // Replace initial history state so Back works from the first page too
+  history.replaceState({page:start}, '', start === 'home' ? location.pathname : '#'+start);
+  if(start !== 'home') showPage(start, false);
+})();
 </script>
 </body>
 </html>
