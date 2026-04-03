@@ -311,7 +311,7 @@ img{max-width:100%;display:block}
           <p class="ttr-strip-delta" style="color:var(--loss)">−46 seit Saisonstart</p>
         </div>
         <div class="ttr-strip-chart">
-          <svg viewBox="0 0 560 190" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;overflow:visible">
+          <svg viewBox="0 0 700 190" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;overflow:visible">
             <line x1="55" y1="20"  x2="540" y2="20"  stroke="rgba(255,255,255,.07)" stroke-width="1" stroke-dasharray="4 4"/>
             <line x1="55" y1="57"  x2="540" y2="57"  stroke="rgba(255,255,255,.07)" stroke-width="1" stroke-dasharray="4 4"/>
             <line x1="55" y1="94"  x2="540" y2="94"  stroke="rgba(255,255,255,.07)" stroke-width="1" stroke-dasharray="4 4"/>
@@ -328,8 +328,8 @@ img{max-width:100%;display:block}
             <text x="400" y="183" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.3)" font-family="Lexend,sans-serif">Dez</text>
             <text x="500" y="183" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.3)" font-family="Lexend,sans-serif">Feb</text>
             <defs><linearGradient id="ttrGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#cafd00" stop-opacity="0.18"/><stop offset="100%" stop-color="#cafd00" stop-opacity="0"/></linearGradient></defs>
-            <polygon points="60,94 60,94 118,93 195,145 270,154 335,139 383,176 420,177 455,172 490,178 530,159 530,182 60,182" fill="url(#ttrGrad)"/>
-            <polyline points="60,94 118,93 195,145 270,154 335,139 383,176 420,177 455,172 490,178 530,159" fill="none" stroke="rgba(202,253,0,.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="60,94 60,94 118,93 195,145 270,154 335,139 383,176 420,177 455,172 490,178 530,159 570,125 605,120 640,142 640,182 60,182" fill="url(#ttrGrad)"/>
+            <polyline points="60,94 118,93 195,145 270,154 335,139 383,176 420,177 455,172 490,178 530,159 570,125 605,120 640,142" fill="none" stroke="rgba(202,253,0,.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <circle cx="60"  cy="94"  r="4" fill="var(--bg)" stroke="#F87171" stroke-width="2"/>
             <circle cx="118" cy="93"  r="4" fill="var(--bg)" stroke="#4ADE80" stroke-width="2"/>
             <circle cx="195" cy="145" r="4" fill="var(--bg)" stroke="#F87171" stroke-width="2"/>
@@ -359,6 +359,27 @@ img{max-width:100%;display:block}
           <a class="link-arrow" onclick="showPage('posts')">Alle ansehen <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
         <div class="posts-grid">
+          <article class="card" onclick="showPage('post13')">
+              <div class="card-cover"><img src="images/post13.jpg" alt="Gärtringen Derby" loading="lazy"/></div>
+              <div class="card-body">
+                <div class="card-meta"><span class="card-date">29. Mär 2026</span><span class="card-ttr">TTR 1150</span><span class="badge badge-nl">Niederlage</span></div>
+                <h2 class="card-title">Gärtringen: Ein Derby, das weh tut — und zwei unbequeme Lektionen</h2>
+                <p class="card-excerpt">Ein 9:4 gegen den Lokalrivalen, zwei Niederlagen in meinen Einzel und klare Erkenntnisse: Mehr Offensivoptionen, mehr Sicherheit gegen Topspin.</p>
+              </div></article>
+          <article class="card" onclick="showPage('post12')">
+              <div class="card-cover"><img src="images/post12.jpg" alt="Sindelfingen Senioren" loading="lazy"/></div>
+              <div class="card-body">
+                <div class="card-meta"><span class="card-date">27. Mär 2026</span><span class="card-ttr">TTR 1166</span><span class="badge badge-win">Sieg</span></div>
+                <h2 class="card-title">Sindelfingen: 7:0 — und was mir Bernds Aufschlag beibrachte</h2>
+                <p class="card-excerpt">Klarer 7:0-Teamserfolg in der Bezirksliga Senioren 40 — persönlich ein lehrreicher Abend über Aufschlagvarianten und Anpassung im Spiel.</p>
+              </div></article>
+          <article class="card" onclick="showPage('post11')">
+              <div class="card-cover"><img src="images/post11.jpg" alt="Seniorenliga Premiere" loading="lazy"/></div>
+              <div class="card-body">
+                <div class="card-meta"><span class="card-date">25. Mär 2026</span><span class="card-ttr">TTR 1162</span><span class="badge badge-win">Sieg</span></div>
+                <h2 class="card-title">Rohrau II gegen Weil der Stadt — meine Premiere in der Seniorenliga</h2>
+                <p class="card-excerpt">Erster Einsatz in der Seniorenliga: Team verliert 5:7, ich gewinne beide Einzel — darunter einen 3:1-Sieg gegen TTR 1273, meinen bislang wertvollsten.</p>
+              </div></article>
           <article class="card" onclick="showPage('post10')">
               <div class="card-cover"><img src="images/post10.jpg" alt="Schönbuch" loading="lazy"/></div>
               <div class="card-body">
@@ -408,6 +429,9 @@ img{max-width:100%;display:block}
   <div style="padding-bottom:6rem">
     <header style="padding-top:2.5rem;padding-bottom:1.75rem;border-bottom:1px solid var(--border);margin-bottom:3rem"><div class="container"><p class="page-eyebrow">10 Einträge</p><h1 style="font-family:var(--font-display);font-size:1.75rem;font-weight:700;letter-spacing:-.02em;color:var(--text-1)">Alle Beiträge</h1></div></header>
     <div class="container"><div style="display:flex;flex-direction:column;gap:1rem">
+      <article class="card" onclick="showPage('post13')"><div class="card-cover"><img src="images/post13.jpg" alt="Gärtringen Derby" loading="lazy"/></div><div class="card-body"><div class="card-meta"><span class="card-date">29. Mär 2026</span><span class="card-ttr">TTR 1150</span><span class="badge badge-nl">Niederlage</span></div><h2 class="card-title">Gärtringen: Ein Derby, das weh tut — und zwei unbequeme Lektionen</h2><p class="card-excerpt">Ein 9:4 gegen den Lokalrivalen, zwei Niederlagen in meinen Einzel und klare Erkenntnisse: Mehr Offensivoptionen, mehr Sicherheit gegen Topspin.</p></div></article>
+      <article class="card" onclick="showPage('post12')"><div class="card-cover"><img src="images/post12.jpg" alt="Sindelfingen Senioren" loading="lazy"/></div><div class="card-body"><div class="card-meta"><span class="card-date">27. Mär 2026</span><span class="card-ttr">TTR 1166</span><span class="badge badge-win">Sieg</span></div><h2 class="card-title">Sindelfingen: 7:0 — und was mir Bernds Aufschlag beibrachte</h2><p class="card-excerpt">Klarer 7:0-Teamserfolg in der Bezirksliga Senioren 40 — persönlich ein lehrreicher Abend über Aufschlagvarianten und Anpassung im Spiel.</p></div></article>
+      <article class="card" onclick="showPage('post11')"><div class="card-cover"><img src="images/post11.jpg" alt="Seniorenliga Premiere" loading="lazy"/></div><div class="card-body"><div class="card-meta"><span class="card-date">25. Mär 2026</span><span class="card-ttr">TTR 1162</span><span class="badge badge-win">Sieg</span></div><h2 class="card-title">Rohrau II gegen Weil der Stadt — meine Premiere in der Seniorenliga</h2><p class="card-excerpt">Erster Einsatz in der Seniorenliga: Team verliert 5:7, ich gewinne beide Einzel — darunter einen 3:1-Sieg gegen TTR 1273, meinen bislang wertvollsten.</p></div></article>
       <article class="card" onclick="showPage('post10')"><div class="card-cover"><img src="images/post10.jpg" alt="Schönbuch" loading="lazy"/></div><div class="card-body"><div class="card-meta"><span class="card-date">20. Feb 2026</span><span class="card-ttr">TTR 1138</span><span class="badge badge-win">Sieg</span></div><h2 class="card-title">Schönbuch: 3:0 — und ich verstehe selbst nicht ganz warum</h2><p class="card-excerpt">Ein klarer 3:0-Sieg gegen Ivan Kuvsinov (TTR 1190) — Aufschlag, Offensive, Blocks, alles hat gepasst.</p><a class="card-more">Weiterlesen <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article>
       <article class="card" onclick="showPage('post9')"><div class="card-cover"><img src="images/post9.jpg"/></div><div class="card-body"><div class="card-meta"><span class="card-date">14. Feb 2026</span><span class="card-ttr">TTR 1123</span><span class="badge badge-nl">Niederlage</span></div><h2 class="card-title">Nochmal Noppen, nochmal Niederlage — mein größter Rückschlag</h2><p class="card-excerpt">2:3 gegen Hans-Peter Zwick und sein Störspiel — wieder Noppen, wieder verloren. Das muss sich ändern.</p><a class="card-more">Weiterlesen <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article>
       <article class="card" onclick="showPage('post8')"><div class="card-cover"><img src="images/post8.jpg" alt="Herrenberg" loading="lazy"/></div><div class="card-body"><div class="card-meta"><span class="card-date">07. Feb 2026</span><span class="card-ttr">TTR 1129</span><span class="badge badge-win">Sieg</span></div><h2 class="card-title">Herrenberg: Vier Sätze, vier verschiedene Spiele</h2><p class="card-excerpt">3:1 gegen Andrej Semenishch — Übermut, Nerven, Geduld und am Ende doch das bessere Ende für mich.</p><a class="card-more">Weiterlesen <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></article>
@@ -727,6 +751,95 @@ img{max-width:100%;display:block}
   <footer class="footer"><div class="container footer-inner"><div><a class="footer-logo">TT-Tagebuch</a><p class="footer-tagline">Mein persönliches Tischtennis-Protokoll</p></div><ul class="footer-links"><li><a class="footer-link" onclick="showPage('home')">Start</a></li><li><a class="footer-link" onclick="showPage('posts')">Beiträge</a></li><li><a class="footer-link" onclick="showPage('stats')">Statistik</a></li></ul><p class="footer-copy">© 2026</p></div></footer>
 </div>
 
+<div id="page-post11" class="page">
+  <nav class="nav-sticky"><div class="container nav-inner-row"><a class="nav-logo" onclick="showPage('home')"><span class="nav-logo-icon"><svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="9.5" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7.5C6.5 9.5 7 13 5 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M17.5 7.5C15.5 9.5 15 13 17 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>TT-Tagebuch</a><ul class="nav-links"><li><a class="nav-link active" onclick="showPage('posts')">Beiträge</a></li><li><a class="nav-link" onclick="showPage('stats')">Statistik</a></li></ul></div></nav>
+  <article style="padding-bottom:6rem">
+    <header class="post-header"><div class="container post-header-inner"><div class="post-meta-top"><a class="link-back" onclick="showPage('posts')"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Alle Beiträge</a></div><h1 class="post-title">Rohrau II gegen Weil der Stadt — meine Premiere in der Seniorenliga</h1><div class="post-meta"><span class="meta-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>25. März 2026</span><span class="meta-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 12L6 7l3 3 5-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>TTR 1162</span><span class="badge badge-win">Sieg</span><span class="meta-item">Bezirksklasse Senioren</span></div></div></header>
+    <div class="container post-header-inner">
+      <img src="images/post11.jpg" alt="Seniorenliga Premiere" style="width:100%;aspect-ratio:16/8;object-fit:cover;object-position:center;border-radius:var(--radius-lg);margin-bottom:3rem;display:block"/>
+      <div class="prose">
+        <p>Erster Einsatz in der Seniorenliga. Ein anderes Niveau, ein anderer Druck — und am Ende ein bitteres 5:7 für Rohrau II, das sich aber deutlich enger angefühlt hat, als es das Ergebnis vermuten lässt.</p>
+
+        <h2>Das Mannschaftsspiel: Doppel entscheidet</h2>
+        <p>Im vorderen Paarkreuz hatten die Weil der Städter klar die Nase vorn — dort haben sie sämtliche Punkte geholt und damit früh den Ton gesetzt. Wir haben in der Mitte und hinten gut gehalten, sodass es bis zum letzten Doppel noch möglich war, auf 6:6 zu kommen. Basti und ich hätten das gebraucht. Wir hatten unsere Momente, aber das erste Doppel aus Weil der Stadt war einfach zu stark — clever aufgestellt, druckvoll im Spiel. So blieb es beim 5:7.</p>
+        <p>Schade, aber das ist Mannschaftstischtennis: Wenn der vordere Paarkreuz schwächelt, müssen die anderen mehr als 100&nbsp;% liefern, und auch das reicht manchmal nicht.</p>
+
+        <h2>Mein erster Auftritt: Konzentration als Schlüssel</h2>
+        <p>Mein erstes Einzel gegen <strong>Hans-Peter Nüssle (TTR 1092)</strong> war kein Selbstläufer. Es war eng, Satz für Satz — 11:8, 11:7, 11:6. Aber ich war von der ersten Minute an konzentriert, habe kaum freie Fehler gemacht und ihn nie aus dem Spiel gelassen. Das 3:0 klingt klarer als es sich anfühlte.</p>
+
+        <h2>Raußmüller — mein bislang stärkster Sieg</h2>
+        <p>Im zweiten Einzel wartete <strong>Dieter Raußmüller (TTR 1273)</strong> — mit Abstand der bisher stärkste Gegner, den ich je bezwungen habe. Dieter ist ein echter Offensivspieler, hat einige wirklich starke Angriffe gezeigt und mich mehrfach unter Druck gesetzt. Ich habe mich aber auf meine Defensive verlassen — ruhig, kontrolliert, kaum Fehler. Wenn er angriff, war der Ball zurück; wenn ich die Chance sah, habe ich selbst angegriffen.</p>
+        <p>3:1 (11:13, 11:7, 11:8, 11:5). Den ersten Satz habe ich noch verloren, dann aber das Spiel gedreht. Ein Ergebnis, über das ich mich noch lange freuen werde.</p>
+
+        <h2>Fazit</h2>
+        <p>Als Mannschaft haben wir verloren — das tut weh, besonders weil das 5:7 vermeidbar war. Persönlich war es aber ein außergewöhnlicher Abend: zwei Siege, darunter der wertvollste meiner bisherigen Laufbahn. Wenn ich so spiele, bin ich in dieser Liga angekommen. <strong>So kann es weitergehen.</strong></p>
+      </div>
+      <aside class="match-stats"><h2 class="match-stats-title">Spieldetails</h2><dl class="match-grid"><dt>Spiel 1 – Sieg</dt><dd>Hans-Peter Nüssle (TTR 1092) · 3:0 (11:8, 11:7, 11:6)</dd><dt>Spiel 2 – Sieg</dt><dd>Dieter Raußmüller (TTR 1273) · 3:1 (11:13, 11:7, 11:8, 11:5)</dd><dt>Mannschaft</dt><dd>SV Rohrau II – Spvgg Weil der Stadt II <strong>5:7</strong></dd><dt>TTR vorher</dt><dd>1138</dd><dt>TTR nachher</dt><dd>1162 <span style="color:var(--win);font-weight:600">+24</span></dd></dl></aside>
+      <nav style="margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border)"><a class="link-arrow" onclick="showPage('posts')"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Alle Beiträge ansehen</a></nav>
+    </div>
+  </article>
+  <footer class="footer"><div class="container footer-inner"><div><a class="footer-logo">TT-Tagebuch</a><p class="footer-tagline">Mein persönliches Tischtennis-Protokoll</p></div><ul class="footer-links"><li><a class="footer-link" onclick="showPage('home')">Start</a></li><li><a class="footer-link" onclick="showPage('posts')">Beiträge</a></li><li><a class="footer-link" onclick="showPage('stats')">Statistik</a></li></ul><p class="footer-copy">© 2026</p></div></footer>
+</div>
+
+<div id="page-post12" class="page">
+  <nav class="nav-sticky"><div class="container nav-inner-row"><a class="nav-logo" onclick="showPage('home')"><span class="nav-logo-icon"><svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="9.5" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7.5C6.5 9.5 7 13 5 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M17.5 7.5C15.5 9.5 15 13 17 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>TT-Tagebuch</a><ul class="nav-links"><li><a class="nav-link active" onclick="showPage('posts')">Beiträge</a></li><li><a class="nav-link" onclick="showPage('stats')">Statistik</a></li></ul></div></nav>
+  <article style="padding-bottom:6rem">
+    <header class="post-header"><div class="container post-header-inner"><div class="post-meta-top"><a class="link-back" onclick="showPage('posts')"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Alle Beiträge</a></div><h1 class="post-title">Sindelfingen: 7:0 — und was mir Bernds Aufschlag beibrachte</h1><div class="post-meta"><span class="meta-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>27. März 2026</span><span class="meta-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 12L6 7l3 3 5-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>TTR 1166</span><span class="badge badge-win">Sieg</span><span class="meta-item">Bezirksliga Senioren 40</span></div></div></header>
+    <div class="container post-header-inner">
+      <img src="images/post12.jpg" alt="Sindelfingen Senioren 40" style="width:100%;aspect-ratio:16/8;object-fit:cover;object-position:center;border-radius:var(--radius-lg);margin-bottom:3rem;display:block"/>
+      <div class="prose">
+        <p>Zwei Tage nach dem Debut in der Seniorenliga — und gleich der nächste Einsatz, diesmal für unsere erste Seniorenmannschaft in der <strong>Bezirksliga Senioren 40</strong>. Auswärts in Sindelfingen, 20 Uhr.</p>
+
+        <h2>Das Mannschaftsspiel: Ein klarer Tag</h2>
+        <p>Wir waren auf allen Positionen klar besser aufgestellt und haben das auch auf den Tisch gebracht: <strong>7:0</strong>, alle sieben Spiele gewonnen. Einer dieser Abende, an denen es einfach läuft — die Einzelpunkte kommen, das Doppel sitzt, und die Mannschaft zieht in eine Richtung. Kein Drama, kein Zittern, klarer Sieg.</p>
+
+        <h2>Mein Einzel — Doppel als lehrreicher Vorgeschmack</h2>
+        <p>Interessant war mein Weg zu dem Sieg gegen <strong>Bernd Wunsch (TTR 1067)</strong>. Im Doppel hatte ich bereits mit ihm zu tun bekommen — und dort war sein Aufschlag mein größtes Problem. Ich konnte damit überhaupt nicht umgehen, war ständig in der Defensive und völlig unvorbereitet für sein Spiel.</p>
+        <p>Im Einzel lief es dann überraschend besser. Bernd setzte komischerweise nicht dieselben Aufschläge ein, die mir im Doppel so Probleme gemacht hatten. Dadurch konnte ich freier spielen, kam in meinen Rhythmus — und war jenseits der Aufschläge insgesamt solider. 3:0 (11:8, 11:7, 11:4), ein klarer Sieg.</p>
+
+        <h2>Was ich mitnehme</h2>
+        <p>Der Abend hat mich aber auch etwas gelehrt: Ich muss besser darin werden, mich auf ungewohnte Aufschläge schnell einzustellen. Im Doppel war ich komplett hilflos — das darf nicht sein. Wenn Bernd im Einzel dieselben Aufschläge eingesetzt hätte, wäre es eng geworden. Gut, dass er es nicht tat. Beim nächsten Mal darf ich mich darauf nicht verlassen.</p>
+      </div>
+      <aside class="match-stats"><h2 class="match-stats-title">Spieldetails</h2><dl class="match-grid"><dt>Gegner</dt><dd>Bernd Wunsch (TTR 1067)</dd><dt>Ergebnis</dt><dd>3:0 (11:8, 11:7, 11:4)</dd><dt>Mannschaft</dt><dd>VfL Sindelfingen – SV Rohrau <strong>0:7</strong></dd><dt>TTR vorher</dt><dd>1162</dd><dt>TTR nachher</dt><dd>1166 <span style="color:var(--win);font-weight:600">+4</span></dd></dl></aside>
+      <nav style="margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border)"><a class="link-arrow" onclick="showPage('posts')"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Alle Beiträge ansehen</a></nav>
+    </div>
+  </article>
+  <footer class="footer"><div class="container footer-inner"><div><a class="footer-logo">TT-Tagebuch</a><p class="footer-tagline">Mein persönliches Tischtennis-Protokoll</p></div><ul class="footer-links"><li><a class="footer-link" onclick="showPage('home')">Start</a></li><li><a class="footer-link" onclick="showPage('posts')">Beiträge</a></li><li><a class="footer-link" onclick="showPage('stats')">Statistik</a></li></ul><p class="footer-copy">© 2026</p></div></footer>
+</div>
+
+<div id="page-post13" class="page">
+  <nav class="nav-sticky"><div class="container nav-inner-row"><a class="nav-logo" onclick="showPage('home')"><span class="nav-logo-icon"><svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="9.5" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7.5C6.5 9.5 7 13 5 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M17.5 7.5C15.5 9.5 15 13 17 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>TT-Tagebuch</a><ul class="nav-links"><li><a class="nav-link active" onclick="showPage('posts')">Beiträge</a></li><li><a class="nav-link" onclick="showPage('stats')">Statistik</a></li></ul></div></nav>
+  <article style="padding-bottom:6rem">
+    <header class="post-header"><div class="container post-header-inner"><div class="post-meta-top"><a class="link-back" onclick="showPage('posts')"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Alle Beiträge</a></div><h1 class="post-title">Gärtringen: Ein Derby, das weh tut — und zwei unbequeme Lektionen</h1><div class="post-meta"><span class="meta-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>29. März 2026</span><span class="meta-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 12L6 7l3 3 5-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>TTR 1150</span><span class="badge badge-nl">Niederlage</span><span class="meta-item">KLB E-Erwachsene</span></div></div></header>
+    <div class="container post-header-inner">
+      <img src="images/post13.jpg" alt="Derby in Gärtringen" style="width:100%;aspect-ratio:16/8;object-fit:cover;object-position:center;border-radius:var(--radius-lg);margin-bottom:3rem;display:block"/>
+      <div class="prose">
+        <p>Derby-Tag. TTV Gärtringen V gegen SV Rohrau III — und am Ende eine deutliche <strong>9:4-Niederlage</strong>, die sich nicht besser anfühlte, als sie klingt.</p>
+
+        <h2>Das Mannschaftsspiel: Zu viel Rückstand aus dem vorderen Paarkreuz</h2>
+        <p>Im vorderen Paarkreuz waren wir klar unterlegen — die Gärtringer haben dort sauber gespielt und uns keine Chance gelassen. In der Mitte und hinten haben wir versucht gegenzuhalten, aber der frühe Rückstand war zu groß, um ihn noch aufzuholen. Am Ende stand ein verdienter 9:4-Sieg für Gärtringen.</p>
+
+        <h2>Mein Doppel: Klare Verhältnisse</h2>
+        <p>Ich spielte heute erstmals im <strong>mittleren Paarkreuz</strong> — neu für mich in der Kreisliga B. Im Doppel war ich an der Seite von Horst, wir spielten gegen das erste Doppel der Gärtringer. Es gab nichts zu holen: 0:3, klare Niederlage. Der Gegner war deutlich besser, wir hatten zu wenig Antworten auf ihr Spiel.</p>
+
+        <h2>Einzel 1 gegen Michael Gross — taktisch eingeschlafen</h2>
+        <p><strong>Michael Gross (TTR 1206)</strong> hat mich im Grunde komplett auseinander genommen — 0:3 (6:11, 9:11, 9:11). Ich habe das Spiel von Anfang an verschlafen. Michael hat meine Angriffe konsequent gekontert und mich damit eingeschüchtert. Ich habe immer weniger offensive Aktionen gewagt, wurde berechenbarer — und er hat das gnadenlos ausgenutzt. Sein Vorhand-Topspin ist stark, und ich hatte keine Antwort darauf.</p>
+        <p>Am Ende habe ich fast nur noch auf seine Rückhand gespielt, weil mir nichts anderes einfiel. Das war falsch. Verdiente Niederlage.</p>
+
+        <h2>Einzel 2 gegen Andreas Ott — dasselbe Muster</h2>
+        <p>Gegen <strong>Andreas Ott (TTR 1180)</strong> war es im Grunde eine Wiederholung. 1:3 (11:7, 8:11, 6:11, 8:11) — ich habe den ersten Satz gewonnen, danach aber nachgelassen. Andreas hatte zwar etwas mehr Probleme mit meinen Aufschlägen, aber insgesamt konnte ich zu wenig Druck aufbauen. Die gleiche Geschichte: starker gegnerischer Topspin, fehlende Offensivoptionen auf meiner Seite.</p>
+
+        <h2>Was ich daraus lerne</h2>
+        <p>Dieser Tag hat mir klar gezeigt: Ich brauche mehr offensive Varianten, um Gegner auf diesem Niveau dauerhaft beschäftigen zu können. Und ich muss sicherer im Umgang mit starkem Topspin werden — sowohl in der Defensive als auch beim eigenen Kontertor. Wenn beides fehlt, bin ich zu leicht zu lesen.</p>
+        <p>Das war ein gebrauchter Tag. Aber manchmal braucht es genau solche Spiele, damit man weiß, woran man arbeiten muss.</p>
+      </div>
+      <aside class="match-stats"><h2 class="match-stats-title">Spieldetails</h2><dl class="match-grid"><dt>Spiel 1 – Niederlage</dt><dd>Michael Gross (TTR 1206) · 0:3 (6:11, 9:11, 9:11)</dd><dt>Spiel 2 – Niederlage</dt><dd>Andreas Ott (TTR 1180) · 1:3 (11:7, 8:11, 6:11, 8:11)</dd><dt>Doppel – Niederlage</dt><dd>mit Horst vs. Doppel 1 Gärtringen · 0:3</dd><dt>Mannschaft</dt><dd>TTV Gärtringen V – SV Rohrau III <strong>9:4</strong></dd><dt>TTR vorher</dt><dd>1166</dd><dt>TTR nachher</dt><dd>1150 <span style="color:var(--loss);font-weight:600">−16</span></dd></dl></aside>
+      <nav style="margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border)"><a class="link-arrow" onclick="showPage('posts')"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Alle Beiträge ansehen</a></nav>
+    </div>
+  </article>
+  <footer class="footer"><div class="container footer-inner"><div><a class="footer-logo">TT-Tagebuch</a><p class="footer-tagline">Mein persönliches Tischtennis-Protokoll</p></div><ul class="footer-links"><li><a class="footer-link" onclick="showPage('home')">Start</a></li><li><a class="footer-link" onclick="showPage('posts')">Beiträge</a></li><li><a class="footer-link" onclick="showPage('stats')">Statistik</a></li></ul><p class="footer-copy">© 2026</p></div></footer>
+</div>
+
 <div id="page-stats" class="page">
   <nav class="nav-sticky"><div class="container nav-inner-row"><a class="nav-logo" onclick="showPage('home')"><span class="nav-logo-icon"><svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="9.5" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7.5C6.5 9.5 7 13 5 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M17.5 7.5C15.5 9.5 15 13 17 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>TT-Tagebuch</a><ul class="nav-links"><li><a class="nav-link" onclick="showPage('posts')">Beiträge</a></li><li><a class="nav-link active" onclick="showPage('stats')">Statistik</a></li></ul></div></nav>
   <div style="padding-bottom:6rem">
@@ -762,6 +875,7 @@ img{max-width:100%;display:block}
           <text x="290" y="183" text-anchor="middle" font-size="10" fill="#A1A1AA" font-family="Space Grotesk,sans-serif">Nov</text>
           <text x="400" y="183" text-anchor="middle" font-size="10" fill="#A1A1AA" font-family="Space Grotesk,sans-serif">Dez</text>
           <text x="500" y="183" text-anchor="middle" font-size="10" fill="#A1A1AA" font-family="Space Grotesk,sans-serif">Feb</text>
+          <text x="605" y="183" text-anchor="middle" font-size="10" fill="#A1A1AA" font-family="Space Grotesk,sans-serif">Mär</text>
           <!-- y=94+(1184-v)*1.42: 1184→94 1185→93 1148→145 1141→154 1152→139 1126→176 1116→177 1129→172 1123→178 1138→159 -->
           <polygon points="60,94 60,94 118,93 195,145 270,154 335,139 383,176 420,177 455,172 490,178 530,159 530,182 60,182" fill="url(#ag)"/>
           <polyline points="60,94 118,93 195,145 270,154 335,139 383,176 420,177 455,172 490,178 530,159" fill="none" stroke="rgba(202,253,0,.7)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -790,6 +904,11 @@ img{max-width:100%;display:block}
       </div>
       <h2 class="sec-lbl">Ergebnisse</h2>
       <div class="res-table-wrap"><table class="res-table"><thead><tr><th>Gegner</th><th>Ergebnis</th><th>Sätze</th><th>TTR / Δ</th><th>Datum</th></tr></thead><tbody>
+        <tr><td class="td-opp"><a class="opp-link" onclick="showPage('post13')">Andreas Ott (1180)</a></td><td><span class="badge badge-nl">Niederlage</span></td><td class="td-sets">1:3</td><td class="td-ttr">1159 <span class="td-delta td-delta-neg">−9</span></td><td class="td-date">29. Mär 2026</td></tr>
+        <tr><td class="td-opp"><a class="opp-link" onclick="showPage('post13')">Michael Gross (1206)</a></td><td><span class="badge badge-nl">Niederlage</span></td><td class="td-sets">0:3</td><td class="td-ttr">1166 <span class="td-delta td-delta-neg">−7</span></td><td class="td-date">29. Mär 2026</td></tr>
+        <tr><td class="td-opp"><a class="opp-link" onclick="showPage('post12')">Bernd Wunsch (1067)</a></td><td><span class="badge badge-win">Sieg</span></td><td class="td-sets">3:0</td><td class="td-ttr">1162 <span class="td-delta td-delta-plus">+4</span></td><td class="td-date">27. Mär 2026</td></tr>
+        <tr><td class="td-opp"><a class="opp-link" onclick="showPage('post11')">Dieter Raußmüller (1273)</a></td><td><span class="badge badge-win">Sieg</span></td><td class="td-sets">3:1</td><td class="td-ttr">1145 <span class="td-delta td-delta-plus">+17</span></td><td class="td-date">25. Mär 2026</td></tr>
+        <tr><td class="td-opp"><a class="opp-link" onclick="showPage('post11')">Hans-Peter Nüssle (1092)</a></td><td><span class="badge badge-win">Sieg</span></td><td class="td-sets">3:0</td><td class="td-ttr">1138 <span class="td-delta td-delta-plus">+7</span></td><td class="td-date">25. Mär 2026</td></tr>
         <tr><td class="td-opp"><a class="opp-link" onclick="showPage('post10')">Ivan Kuvsinov (1190)</a></td><td><span class="badge badge-win">Sieg</span></td><td class="td-sets">3:0</td><td class="td-ttr">1123 <span class="td-delta td-delta-plus">+15</span></td><td class="td-date">20. Feb 2026</td></tr>
         <tr><td class="td-opp"><a class="opp-link" onclick="showPage('post9')">Hans-Peter Zwick (1177)</a></td><td><span class="badge badge-nl">Niederlage</span></td><td class="td-sets">2:3</td><td class="td-ttr">1129 <span class="td-delta td-delta-neg">−6</span></td><td class="td-date">14. Feb 2026</td></tr>
         <tr><td class="td-opp"><a class="opp-link" onclick="showPage('post8')">Andrej Semenishch (1152)</a></td><td><span class="badge badge-win">Sieg</span></td><td class="td-sets">3:1</td><td class="td-ttr">1116 <span class="td-delta td-delta-plus">+13</span></td><td class="td-date">07. Feb 2026</td></tr>
