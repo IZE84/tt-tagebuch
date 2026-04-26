@@ -289,6 +289,15 @@ img{max-width:100%;display:block}
   .tl-card-wrap.left .tl-card-meta { justify-content:flex-start; }
 }
 
+
+/* Timeline expandable */
+.tl-body { display:none; margin-top:.75rem; padding-top:.75rem; border-top:1px solid var(--border); }
+.tl-card.open .tl-body { display:block; }
+.tl-card-hdr { cursor:pointer; user-select:none; }
+.tl-chevron { display:inline-block; transition:transform .2s; font-size:.75rem; color:var(--text-3); margin-left:auto; flex-shrink:0; }
+.tl-card.open .tl-chevron { transform:rotate(180deg); }
+.tl-card-hdr-row { display:flex; align-items:center; gap:.5rem; }
+
 </style>
 </head>
 <body>
@@ -400,7 +409,7 @@ img{max-width:100%;display:block}
       <div class="container">
         <div class="section-header">
           <div>
-          <p class="section-eyebrow">Alle 18 Beiträge</p>
+          <p class="section-eyebrow">Alle 18 Beiträge · neueste zuerst</p>
             <h2 class="section-title">Match-Timeline</h2>
           </div>
           <a class="link-arrow" onclick="showPage('posts')">Beitragsseite <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -408,251 +417,459 @@ img{max-width:100%;display:block}
         <div class="tl-wrap">
         <div class="tl-row">
           <div class="tl-mid"><div class="tl-dot win"></div></div>
-          <div class="tl-card-wrap right"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">22. Apr 2026</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
-              <span class="badge badge-win">Sieg</span>
-              <span class="tl-ttr">TTR 1213 ★</span>
+          <div class="tl-card-wrap right"><div class="tl-card" id="tlc-post18" onclick="toggleTlCard('post18')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">22. Apr 2026</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
+                <span class="badge badge-win">Sieg</span>
+                <span class="tl-ttr">TTR 1213</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Warnschuss zum Saisonabschluss</div>
+              <div class="tl-card-excerpt">3:0 & 3:1 · Miksch & Wack · +18 · neuer Rekord</div>
             </div>
-            <div class="tl-card-title">Warnschuss zum Saisonabschluss</div>
-            <div class="tl-card-excerpt">3:0 & 3:1 · Miksch & Wack · +18 · neuer Höchstwert</div>
-            <button class="tl-btn" onclick="showPage('post18')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Ein perfekter erster Satz (11:2), dann wieder Übermut — und ein zweites Spiel das unerwartet doch noch zählen hätte können. Die Lektion vor dem Pokalfinale.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post18')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
           </div></div>
         </div>
         <div class="tl-row">
-          <div class="tl-mid"><div class="tl-dot win"></div></div>
-          <div class="tl-card-wrap right"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">21. Apr 2026</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">BK-Sen.</span>
-              <span class="badge badge-win">Sieg</span>
-              <span class="tl-ttr">TTR 1195 ★</span>
+          <div class="tl-card-wrap left"><div class="tl-card" id="tlc-post17" onclick="toggleTlCard('post17')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">21. Apr 2026</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">BK-Sen.</span>
+                <span class="badge badge-win">Sieg</span>
+                <span class="tl-ttr">TTR 1195</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Böblingen Senioren: Zwei Siege und ein neuer Rekord</div>
+              <div class="tl-card-excerpt">3:0 & 3:1 · Rajic & Zarifian-Arnold · +20 · Höchstwert</div>
             </div>
-            <div class="tl-card-title">Böblingen Senioren: Zwei Siege und ein neuer Rekord</div>
-            <div class="tl-card-excerpt">3:0 & 3:1 · Rajic & Zarifian-Arnold · +20 · neuer Höchstwert</div>
-            <button class="tl-btn" onclick="showPage('post17')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Aufschlag als Waffe gegen Rajic, taktische Anpassung gegen Zarifian-Arnolds Kombination — und am Ende ein neuer persönlicher TTR-Höchststand.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post17')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
           </div></div>
+          <div class="tl-mid"><div class="tl-dot win"></div></div>
+          <div class="tl-card-wrap right" style="visibility:hidden"></div>
         </div>
         <div class="tl-row">
           <div class="tl-mid"><div class="tl-dot loss"></div></div>
-          <div class="tl-card-wrap right"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">19. Apr 2026</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
-              <span class="badge badge-nl">Niederlage</span>
-              <span class="tl-ttr">TTR 1175</span>
+          <div class="tl-card-wrap right"><div class="tl-card" id="tlc-post16" onclick="toggleTlCard('post16')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">19. Apr 2026</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
+                <span class="badge badge-nl">Niederlage</span>
+                <span class="tl-ttr">TTR 1175</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Übermut tut selten gut</div>
+              <div class="tl-card-excerpt">1:3 · Andrea Leutritz (TTR 1269) · −4</div>
             </div>
-            <div class="tl-card-title">Übermut tut selten gut</div>
-            <div class="tl-card-excerpt">1:3 · Andrea Leutritz (TTR 1269) · −4</div>
-            <button class="tl-btn" onclick="showPage('post16')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Führung 4:0, dann Lob von außen gehört, die Gegnerin unterschätzt — und zu spät bemerkt dass sie Noppengummi spielt. Zweimal die gleiche Falle.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post16')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
           </div></div>
         </div>
         <div class="tl-row">
-          <div class="tl-mid"><div class="tl-dot loss"></div></div>
-          <div class="tl-card-wrap right"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">15. Apr 2026</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLA</span>
-              <span class="badge badge-win">Sieg</span>
-              <span class="tl-ttr">TTR 1179</span>
+          <div class="tl-card-wrap left"><div class="tl-card" id="tlc-post15" onclick="toggleTlCard('post15')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">15. Apr 2026</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLA</span>
+                <span class="badge badge-win">Sieg</span>
+                <span class="tl-ttr">TTR 1179</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Etwas zu verlieren — mein erster Linkshänder</div>
+              <div class="tl-card-excerpt">3:0 · Gerhard Ulmer (TTR 1187) · +11</div>
             </div>
-            <div class="tl-card-title">Etwas zu verlieren — mein erster Linkshänder</div>
-            <div class="tl-card-excerpt">3:0 · Gerhard Ulmer (TTR 1187) · +11</div>
-            <button class="tl-btn" onclick="showPage('post15')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          </div></div>
-        </div><div class="tl-row">
-          <div class="tl-card-wrap left"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">12. Apr 2026</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLA</span>
-              <span class="badge badge-win">Sieg</span>
-              <span class="tl-ttr">TTR 1168</span>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Zum ersten Mal gegen einen Linkshänder — und zum ersten Mal das Gefühl, von der Mannschaft erwartet zu werden. Coaching im zweiten Satz dreht alles.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post15')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
             </div>
-            <div class="tl-card-title">Mötzingen: Mein bislang stärkster Sieg</div>
-            <div class="tl-card-excerpt">3:1 · Dominik Rubach (TTR 1286) · +18</div>
-            <button class="tl-btn" onclick="showPage('post14')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div></div>
           <div class="tl-mid"><div class="tl-dot win"></div></div>
           <div class="tl-card-wrap right" style="visibility:hidden"></div>
-        </div><div class="tl-row">
-          <div class="tl-mid"><div class="tl-dot loss"></div></div>
-          <div class="tl-card-wrap right"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">29. Mär 2026</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
-              <span class="badge badge-nl">Niederlage</span>
-              <span class="tl-ttr">TTR 1150</span>
-            </div>
-            <div class="tl-card-title">Gärtringen: Ein Derby, das weh tut</div>
-            <div class="tl-card-excerpt">0:3 & 1:3 · Gross & Ott · −16</div>
-            <button class="tl-btn" onclick="showPage('post13')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          </div></div>
-        </div><div class="tl-row">
-          <div class="tl-card-wrap left"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">27. Mär 2026</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">BL-Sen.</span>
-              <span class="badge badge-win">Sieg</span>
-              <span class="tl-ttr">TTR 1166</span>
-            </div>
-            <div class="tl-card-title">Sindelfingen: 7:0 und was Bernds Aufschlag lehrte</div>
-            <div class="tl-card-excerpt">3:0 · Bernd Wunsch (TTR 1067) · +4</div>
-            <button class="tl-btn" onclick="showPage('post12')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          </div></div>
+        </div>
+        <div class="tl-row">
           <div class="tl-mid"><div class="tl-dot win"></div></div>
-          <div class="tl-card-wrap right" style="visibility:hidden"></div>
-        </div><div class="tl-row">
-          <div class="tl-mid"><div class="tl-dot win"></div></div>
-          <div class="tl-card-wrap right"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">25. Mär 2026</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">BK-Sen.</span>
-              <span class="badge badge-win">Sieg</span>
-              <span class="tl-ttr">TTR 1162</span>
+          <div class="tl-card-wrap right"><div class="tl-card" id="tlc-post14" onclick="toggleTlCard('post14')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">12. Apr 2026</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLA</span>
+                <span class="badge badge-win">Sieg</span>
+                <span class="tl-ttr">TTR 1168</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Mötzingen: Mein bislang stärkster Sieg</div>
+              <div class="tl-card-excerpt">3:1 · Dominik Rubach (TTR 1286) · +18</div>
             </div>
-            <div class="tl-card-title">Rohrau II: Premiere in der Seniorenliga</div>
-            <div class="tl-card-excerpt">3:0 & 3:1 · Nüssle & Raußmüller · +24</div>
-            <button class="tl-btn" onclick="showPage('post11')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">136 Punkte Unterschied, die richtige Taktik und ein Timeout von Werner im entscheidenden Moment — der stärkste Sieg meiner bisherigen Karriere.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post14')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
           </div></div>
-        </div><div class="tl-row">
-          <div class="tl-card-wrap left"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">20. Feb 2026</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
-              <span class="badge badge-win">Sieg</span>
-              <span class="tl-ttr">TTR 1138</span>
+        </div>
+        <div class="tl-row">
+          <div class="tl-card-wrap left"><div class="tl-card" id="tlc-post13" onclick="toggleTlCard('post13')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">29. Mär 2026</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
+                <span class="badge badge-nl">Niederlage</span>
+                <span class="tl-ttr">TTR 1150</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Gärtringen: Ein Derby, das weh tut</div>
+              <div class="tl-card-excerpt">0:3 & 1:3 · Gross & Ott · −16</div>
             </div>
-            <div class="tl-card-title">Schönbuch: 3:0 — und ich verstehe selbst nicht ganz warum</div>
-            <div class="tl-card-excerpt">3:0 · Ivan Kuvsinov (TTR 1190) · +15</div>
-            <button class="tl-btn" onclick="showPage('post10')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          </div></div>
-          <div class="tl-mid"><div class="tl-dot win"></div></div>
-          <div class="tl-card-wrap right" style="visibility:hidden"></div>
-        </div><div class="tl-row">
-          <div class="tl-mid"><div class="tl-dot loss"></div></div>
-          <div class="tl-card-wrap right"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">14. Feb 2026</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
-              <span class="badge badge-nl">Niederlage</span>
-              <span class="tl-ttr">TTR 1123</span>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Zwei Niederlagen gegen Spieler die ich respektieren muss — und klare Erkenntnisse über fehlende Offensivvarianten.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post13')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
             </div>
-            <div class="tl-card-title">Nochmal Noppen, nochmal Niederlage</div>
-            <div class="tl-card-excerpt">2:3 · Hans-Peter Zwick (TTR 1177) · −6</div>
-            <button class="tl-btn" onclick="showPage('post9')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          </div></div>
-        </div><div class="tl-row">
-          <div class="tl-card-wrap left"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">07. Feb 2026</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
-              <span class="badge badge-win">Sieg</span>
-              <span class="tl-ttr">TTR 1129</span>
-            </div>
-            <div class="tl-card-title">Herrenberg: Vier Sätze, vier verschiedene Spiele</div>
-            <div class="tl-card-excerpt">3:1 · Andrej Semenishch (TTR 1152) · +13</div>
-            <button class="tl-btn" onclick="showPage('post8')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          </div></div>
-          <div class="tl-mid"><div class="tl-dot win"></div></div>
-          <div class="tl-card-wrap right" style="visibility:hidden"></div>
-        </div><div class="tl-row">
-          <div class="tl-mid"><div class="tl-dot loss"></div></div>
-          <div class="tl-card-wrap right"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">06. Feb 2026</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
-              <span class="badge badge-nl">Niederlage</span>
-              <span class="tl-ttr">TTR 1116</span>
-            </div>
-            <div class="tl-card-title">Wieder in Mötzingen: Noch keine Revanche</div>
-            <div class="tl-card-excerpt">1:3 · Sven Gerner (TTR 1124) · −10</div>
-            <button class="tl-btn" onclick="showPage('post7')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          </div></div>
-        </div><div class="tl-row">
-          <div class="tl-card-wrap left"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">20. Dez 2025</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">Turnier</span>
-              <span class="badge badge-nl">Niederlage</span>
-              <span class="tl-ttr">TTR 1126</span>
-            </div>
-            <div class="tl-card-title">Schweizer System Masters: 3:3 und zu viele verschenkte Punkte</div>
-            <div class="tl-card-excerpt">6 Runden · 3 Siege 3 Niederlagen</div>
-            <button class="tl-btn" onclick="showPage('post6')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div></div>
           <div class="tl-mid"><div class="tl-dot loss"></div></div>
           <div class="tl-card-wrap right" style="visibility:hidden"></div>
-        </div><div class="tl-row">
+        </div>
+        <div class="tl-row">
           <div class="tl-mid"><div class="tl-dot win"></div></div>
-          <div class="tl-card-wrap right"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">30. Nov 2025</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
-              <span class="badge badge-win">Sieg</span>
-              <span class="tl-ttr">TTR 1141</span>
+          <div class="tl-card-wrap right"><div class="tl-card" id="tlc-post12" onclick="toggleTlCard('post12')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">27. Mär 2026</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">BL-Sen.</span>
+                <span class="badge badge-win">Sieg</span>
+                <span class="tl-ttr">TTR 1166</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Sindelfingen: 7:0 und was Bernds Aufschlag lehrte</div>
+              <div class="tl-card-excerpt">3:0 · Bernd Wunsch (TTR 1067) · +4</div>
             </div>
-            <div class="tl-card-title">Endlich dieses Gefühl: Sieg gegen Gärtringen</div>
-            <div class="tl-card-excerpt">3:1 · Till Baumann (TTR 1129) · +11</div>
-            <button class="tl-btn" onclick="showPage('post5')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Klarer Teamsieg in der Bezirksliga Senioren 40 — persönlich ein lehrreicher Abend über Aufschlagvarianten und taktische Anpassung.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post12')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
           </div></div>
-        </div><div class="tl-row">
-          <div class="tl-card-wrap left"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">22. Nov 2025</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
-              <span class="badge badge-nl">Niederlage</span>
-              <span class="tl-ttr">TTR 1152</span>
+        </div>
+        <div class="tl-row">
+          <div class="tl-card-wrap left"><div class="tl-card" id="tlc-post11" onclick="toggleTlCard('post11')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">25. Mär 2026</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">BK-Sen.</span>
+                <span class="badge badge-win">Sieg</span>
+                <span class="tl-ttr">TTR 1162</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Rohrau II: Premiere in der Seniorenliga</div>
+              <div class="tl-card-excerpt">3:0 & 3:1 · Nüssle & Raußmüller · +24</div>
             </div>
-            <div class="tl-card-title">Unterschätzt und ausgespielt — Deufringen</div>
-            <div class="tl-card-excerpt">0:3 & 1:3 · Benz & Schanz · −9</div>
-            <button class="tl-btn" onclick="showPage('post4')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Erster Einsatz in der Seniorenliga: Team verliert 5:7, ich gewinne beide Einzel — darunter einen 3:1-Sieg gegen TTR 1273.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post11')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </div></div>
+          <div class="tl-mid"><div class="tl-dot win"></div></div>
+          <div class="tl-card-wrap right" style="visibility:hidden"></div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-mid"><div class="tl-dot win"></div></div>
+          <div class="tl-card-wrap right"><div class="tl-card" id="tlc-post10" onclick="toggleTlCard('post10')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">20. Feb 2026</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
+                <span class="badge badge-win">Sieg</span>
+                <span class="tl-ttr">TTR 1138</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Schönbuch: 3:0 — und ich verstehe selbst nicht ganz warum</div>
+              <div class="tl-card-excerpt">3:0 · Ivan Kuvsinov (TTR 1190) · +15</div>
+            </div>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Aufschlag, Offensive, Blocks — an diesem Abend hat alles zusammengespielt. Der erste klare Sieg nach einer langen Durststrecke.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post10')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </div></div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-card-wrap left"><div class="tl-card" id="tlc-post9" onclick="toggleTlCard('post9')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">14. Feb 2026</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
+                <span class="badge badge-nl">Niederlage</span>
+                <span class="tl-ttr">TTR 1123</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Nochmal Noppen, nochmal Niederlage</div>
+              <div class="tl-card-excerpt">2:3 · Hans-Peter Zwick (TTR 1177) · −6</div>
+            </div>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Wieder Noppengummi, wieder verloren. Das Thema zieht sich durch die Saison — Zeit es anzugehen.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post9')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
           </div></div>
           <div class="tl-mid"><div class="tl-dot loss"></div></div>
           <div class="tl-card-wrap right" style="visibility:hidden"></div>
-        </div><div class="tl-row">
+        </div>
+        <div class="tl-row">
           <div class="tl-mid"><div class="tl-dot win"></div></div>
-          <div class="tl-card-wrap right"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">08. Nov 2025</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">Bezirk</span>
-              <span class="badge badge-win">Sieg</span>
-              <span class="tl-ttr">TTR 1148</span>
+          <div class="tl-card-wrap right"><div class="tl-card" id="tlc-post8" onclick="toggleTlCard('post8')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">07. Feb 2026</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
+                <span class="badge badge-win">Sieg</span>
+                <span class="tl-ttr">TTR 1129</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Herrenberg: Vier Sätze, vier verschiedene Spiele</div>
+              <div class="tl-card-excerpt">3:1 · Andrej Semenishch (TTR 1152) · +13</div>
             </div>
-            <div class="tl-card-title">Bezirksmeisterschaft: Halbfinale erreicht</div>
-            <div class="tl-card-excerpt">2 Siege, 2 Niederlagen · Halbfinale</div>
-            <button class="tl-btn" onclick="showPage('post3')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Übermut im zweiten Satz, Nerven im dritten, Geduld im vierten — und am Ende doch das bessere Ende für mich.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post8')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
           </div></div>
-        </div><div class="tl-row">
-          <div class="tl-card-wrap left"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">02. Nov 2025</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
-              <span class="badge badge-nl">Niederlage</span>
-              <span class="tl-ttr">TTR 1141</span>
+        </div>
+        <div class="tl-row">
+          <div class="tl-card-wrap left"><div class="tl-card" id="tlc-post7" onclick="toggleTlCard('post7')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">06. Feb 2026</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
+                <span class="badge badge-nl">Niederlage</span>
+                <span class="tl-ttr">TTR 1116</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Wieder in Mötzingen: Noch keine Revanche</div>
+              <div class="tl-card-excerpt">1:3 · Sven Gerner (TTR 1124) · −10</div>
             </div>
-            <div class="tl-card-title">Lehrstunde in Mötzingen</div>
-            <div class="tl-card-excerpt">0:3 & 1:3 · Fritz & Gerner · −33</div>
-            <button class="tl-btn" onclick="showPage('post')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Zum ersten Mal trifft mich derselbe Gegner ein zweites Mal — ich bin ein anderer Spieler, aber es reicht noch nicht.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post7')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
           </div></div>
           <div class="tl-mid"><div class="tl-dot loss"></div></div>
           <div class="tl-card-wrap right" style="visibility:hidden"></div>
-        </div><div class="tl-row">
-          <div class="tl-mid"><div class="tl-dot win"></div></div>
-          <div class="tl-card-wrap right"><div class="tl-card">
-            <div class="tl-card-meta">
-              <span class="tl-card-date">18. Okt 2025</span>
-              <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
-              <span class="badge badge-win">Sieg</span>
-              <span class="tl-ttr">TTR 1185</span>
+        </div>
+        <div class="tl-row">
+          <div class="tl-mid"><div class="tl-dot loss"></div></div>
+          <div class="tl-card-wrap right"><div class="tl-card" id="tlc-post6" onclick="toggleTlCard('post6')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">20. Dez 2025</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">Turnier</span>
+                <span class="badge badge-nl">Niederlage</span>
+                <span class="tl-ttr">TTR 1126</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Schweizer System Masters: 3:3 und verschenkte Punkte</div>
+              <div class="tl-card-excerpt">6 Runden · 3 Siege 3 Niederlagen</div>
             </div>
-            <div class="tl-card-title">Defensivsieg zum Auftakt</div>
-            <div class="tl-card-excerpt">3:1 · Stefan Kopp (TTR 991) · +1</div>
-            <button class="tl-btn" onclick="showPage('post2')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Sechs Runden Schweizer System, viele Erkenntnisse — und zu viele Niederlagen die ich hätte gewinnen können.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post6')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
           </div></div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-card-wrap left"><div class="tl-card" id="tlc-post5" onclick="toggleTlCard('post5')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">30. Nov 2025</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
+                <span class="badge badge-win">Sieg</span>
+                <span class="tl-ttr">TTR 1141</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Endlich dieses Gefühl: Sieg gegen Gärtringen</div>
+              <div class="tl-card-excerpt">3:1 · Till Baumann (TTR 1129) · +11</div>
+            </div>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Zum ersten Mal habe ich ein Ligaspiel gewonnen und dabei wirklich das Gefühl gehabt, dass ich es in der Hand hatte.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post5')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </div></div>
+          <div class="tl-mid"><div class="tl-dot win"></div></div>
+          <div class="tl-card-wrap right" style="visibility:hidden"></div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-mid"><div class="tl-dot loss"></div></div>
+          <div class="tl-card-wrap right"><div class="tl-card" id="tlc-post4" onclick="toggleTlCard('post4')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">22. Nov 2025</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
+                <span class="badge badge-nl">Niederlage</span>
+                <span class="tl-ttr">TTR 1152</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Unterschätzt und ausgespielt — Deufringen</div>
+              <div class="tl-card-excerpt">0:3 & 1:3 · Benz & Schanz · −9</div>
+            </div>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Das erste Spiel habe ich unterschätzt, das zweite war ein echter Krimi — zwei Niederlagen und ein Minus auf dem Konto.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post4')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </div></div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-card-wrap left"><div class="tl-card" id="tlc-post3" onclick="toggleTlCard('post3')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">08. Nov 2025</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">Bezirk</span>
+                <span class="badge badge-win">Sieg</span>
+                <span class="tl-ttr">TTR 1148</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Bezirksmeisterschaft: Halbfinale erreicht</div>
+              <div class="tl-card-excerpt">2 Siege, 2 Niederlagen · Halbfinale</div>
+            </div>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Mein Ziel war bescheiden: wenigstens ein Spiel gewinnen. Es wurden zwei — und sogar das Halbfinale.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post3')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </div></div>
+          <div class="tl-mid"><div class="tl-dot win"></div></div>
+          <div class="tl-card-wrap right" style="visibility:hidden"></div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-mid"><div class="tl-dot loss"></div></div>
+          <div class="tl-card-wrap right"><div class="tl-card" id="tlc-post" onclick="toggleTlCard('post')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">02. Nov 2025</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
+                <span class="badge badge-nl">Niederlage</span>
+                <span class="tl-ttr">TTR 1141</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Lehrstunde in Mötzingen</div>
+              <div class="tl-card-excerpt">0:3 & 1:3 · Fritz & Gerner · −33</div>
+            </div>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Auswärts in Mötzingen — zwei Niederlagen, zwei verschiedene Lektionen, 33 TTR-Punkte weniger.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </div></div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-card-wrap left"><div class="tl-card" id="tlc-post2" onclick="toggleTlCard('post2')">
+            <div class="tl-card-hdr">
+              <div class="tl-card-hdr-row">
+                <span class="tl-card-date">18. Okt 2025</span>
+                <span style="font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:.3rem;background:rgba(255,255,255,.06);color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">KLB</span>
+                <span class="badge badge-win">Sieg</span>
+                <span class="tl-ttr">TTR 1185</span>
+                <span class="tl-chevron">▾</span>
+              </div>
+              <div class="tl-card-title" style="margin-top:.4rem">Defensivsieg zum Auftakt</div>
+              <div class="tl-card-excerpt">3:1 · Stefan Kopp (TTR 991) · +1</div>
+            </div>
+            <div class="tl-body">
+              <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;margin-bottom:.75rem">Mein erstes Ligaspiel überhaupt — gewonnen durch pure Geduld und ziemlich viel Aufregung.</p>
+              <button class="tl-btn" onclick="event.stopPropagation();showPage('post2')">Zum Bericht <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </div></div>
+          <div class="tl-mid"><div class="tl-dot win"></div></div>
+          <div class="tl-card-wrap right" style="visibility:hidden"></div>
+        </div>
+      </div></div>
+
+    <!-- ─── Saison-Statistik Kacheln ─── -->
+    <section style="padding:4rem 0 3rem">
+      <div class="container">
+        <div class="section-header" style="margin-bottom:2rem">
+          <div>
+            <p class="section-eyebrow">Saison 2025/2026</p>
+            <h2 class="section-title">Auf einen Blick</h2>
+          </div>
+          <a class="stripe-link" onclick="showPage('stats')" style="font-size:.8rem;font-weight:600;color:var(--accent);cursor:pointer;text-decoration:none">Alle Statistiken →</a>
+        </div>
+        <div class="kpi-grid" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr));margin-bottom:2rem">
+          <div class="kpi-card">
+            <span class="kpi-lbl">Siegquote</span>
+            <span class="kpi-val kpi-win">56<span style="font-size:1.25rem;font-weight:600">%</span></span>
+            <div class="winbar"><div class="winbar-fill" style="width:56%"></div></div>
+            <span class="kpi-sub">18 von 32 Spielen</span>
+          </div>
+          <div class="kpi-card" style="border-color:rgba(202,253,0,.2)">
+            <span class="kpi-lbl">Satzbilanz</span>
+            <span class="kpi-val" style="color:var(--accent)">64<span style="font-size:1.25rem;font-weight:500;color:var(--text-3)">:53</span></span>
+            <span class="kpi-sub">von 117 Sätzen gesamt</span>
+          </div>
+          <div class="kpi-card" style="border-color:rgba(74,222,128,.15)">
+            <span class="kpi-lbl">TTR-Höchststand</span>
+            <span class="kpi-val" style="color:#4ADE80">1213</span>
+            <span class="kpi-sub">Tiefpunkt: 1123</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-lbl">Upset-Siege</span>
+            <span class="kpi-val kpi-win">9</span>
+            <span class="kpi-sub">vs. stärkere Gegner (18 Spiele)</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-lbl">Beste Serie</span>
+            <span class="kpi-val" style="color:var(--accent)">4</span>
+            <span class="kpi-sub">Siege in Folge</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-lbl">vs. Stärkere</span>
+            <span class="kpi-val">50<span style="font-size:1.25rem;font-weight:600">%</span></span>
+            <span class="kpi-sub">9 von 18 Spielen gewonnen</span>
+          </div>
+        </div>
+        <!-- Monthly TTR delta mini-table -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem">
+          <p class="kpi-lbl" style="margin-bottom:1rem">Monatsbilanz TTR</p>
+          <div style="display:flex;gap:0;overflow-x:auto">
+            <div style="display:flex;gap:.75rem;min-width:max-content">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:.4rem;min-width:52px">
+                <span style="font-size:.7rem;font-weight:700;color:var(--win)">+1</span>
+                <div style="width:28px;height:4px;background:#4ADE80;border-radius:3px;opacity:.85"></div>
+                <span style="font-size:.65rem;color:var(--text-3);white-space:nowrap">Okt '25</span>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:.4rem;min-width:52px">
+                <span style="font-size:.7rem;font-weight:700;color:var(--loss)">-31</span>
+                <div style="width:28px;height:23px;background:#f87171;border-radius:3px;opacity:.85"></div>
+                <span style="font-size:.65rem;color:var(--text-3);white-space:nowrap">Nov '25</span>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:.4rem;min-width:52px">
+                <span style="font-size:.7rem;font-weight:700;color:var(--loss)">-26</span>
+                <div style="width:28px;height:19px;background:#f87171;border-radius:3px;opacity:.85"></div>
+                <span style="font-size:.65rem;color:var(--text-3);white-space:nowrap">Dez '25</span>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:.4rem;min-width:52px">
+                <span style="font-size:.7rem;font-weight:700;color:var(--win)">+12</span>
+                <div style="width:28px;height:9px;background:#4ADE80;border-radius:3px;opacity:.85"></div>
+                <span style="font-size:.65rem;color:var(--text-3);white-space:nowrap">Feb '26</span>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:.4rem;min-width:52px">
+                <span style="font-size:.7rem;font-weight:700;color:var(--win)">+12</span>
+                <div style="width:28px;height:9px;background:#4ADE80;border-radius:3px;opacity:.85"></div>
+                <span style="font-size:.65rem;color:var(--text-3);white-space:nowrap">Mär '26</span>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:.4rem;min-width:52px">
+                <span style="font-size:.7rem;font-weight:700;color:var(--win)">+63</span>
+                <div style="width:28px;height:48px;background:#4ADE80;border-radius:3px;opacity:.85"></div>
+                <span style="font-size:.65rem;color:var(--text-3);white-space:nowrap">Apr '26</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-        <!-- Stats Stripe -->
+    </section>
+            <!-- Stats Stripe -->
     <div class="stats-stripe">
       <div class="container">
         <div class="stripe-inner">
@@ -1378,11 +1595,17 @@ img{max-width:100%;display:block}
 </div>
 
 <script>
+
+function toggleTlCard(id) {
+  const c = document.getElementById('tlc-'+id);
+  if(c) c.classList.toggle('open');
+}
+
 function showPage(id, pushState){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+id).classList.add('active');
   document.querySelectorAll('.preview-btn').forEach(b=>b.classList.remove('active'));
-  const m={home:0,posts:1,post:2,post2:2,post3:2,post4:2,post5:2,post6:2,post7:2,post8:2,post9:2,post10:2,stats:3};
+  const m={home:0,posts:1,post:2,post2:2,post3:2,post4:2,post5:2,post6:2,post7:2,post8:2,post9:2,post10:2,post11:2,post12:2,post13:2,post14:2,post15:2,post16:2,post17:2,post18:2,stats:3};
   document.querySelectorAll('.preview-btn')[m[id]].classList.add('active');
   window.scrollTo(0,0);
   // Update browser history so Back/Forward buttons work
